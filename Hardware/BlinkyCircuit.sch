@@ -2030,8 +2030,8 @@ Allows current flow when high potential at base.</description>
 <sheets>
 <sheet>
 <plain>
-<frame x1="-5.08" y1="12.7" x2="86.36" y2="114.3" columns="8" rows="5" layer="97"/>
 <text x="25.4" y="119.38" size="1.778" layer="97">Square Wave Generator</text>
+<frame x1="-17.78" y1="-12.7" x2="223.52" y2="116.84" columns="8" rows="5" layer="97"/>
 </plain>
 <instances>
 <instance part="R1" gate="G$1" x="2.54" y="50.8" smashed="yes" rot="R90">
