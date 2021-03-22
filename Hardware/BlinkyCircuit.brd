@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -689,34 +689,34 @@ design rules under a new name.</description>
 <wire x1="125.095" y1="16.57" x2="123.825" y2="16.57" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
-<contactref element="OP1" pad="3"/>
 <contactref element="R8" pad="1"/>
 <contactref element="C9" pad="2"/>
+<contactref element="OP1" pad="2"/>
 <wire x1="-12.28" y1="-160.02" x2="-10.58" y2="-198.12" width="0" layer="19" extent="1-1"/>
-<wire x1="125.095" y1="11.37" x2="-12.28" y2="-160.02" width="0" layer="19" extent="1-1"/>
+<wire x1="123.825" y1="11.37" x2="-12.28" y2="-160.02" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
-<contactref element="OP1" pad="2"/>
 <contactref element="R10" pad="1"/>
 <contactref element="R11" pad="2"/>
+<contactref element="OP1" pad="3"/>
 <wire x1="-12.28" y1="-167.64" x2="-10.58" y2="-171.45" width="0" layer="19" extent="1-1"/>
-<wire x1="123.825" y1="11.37" x2="-12.28" y2="-167.64" width="0" layer="19" extent="1-1"/>
+<wire x1="125.095" y1="11.37" x2="-12.28" y2="-167.64" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
-<contactref element="OP1" pad="1"/>
-<contactref element="OP2" pad="6"/>
 <contactref element="R8" pad="2"/>
 <contactref element="R10" pad="2"/>
+<contactref element="OP1" pad="1"/>
+<contactref element="OP2" pad="5"/>
 <wire x1="-10.58" y1="-160.02" x2="-10.58" y2="-167.64" width="0" layer="19" extent="1-1"/>
-<wire x1="-0.635" y1="-93.92" x2="-10.58" y2="-160.02" width="0" layer="19" extent="1-1"/>
-<wire x1="122.555" y1="11.37" x2="-0.635" y2="-93.92" width="0" layer="19" extent="1-1"/>
+<wire x1="0.635" y1="-93.92" x2="-10.58" y2="-160.02" width="0" layer="19" extent="1-1"/>
+<wire x1="122.555" y1="11.37" x2="0.635" y2="-93.92" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
-<contactref element="OP2" pad="5"/>
-<contactref element="OP2" pad="7"/>
 <contactref element="R12" pad="1"/>
+<contactref element="OP2" pad="6"/>
+<contactref element="OP2" pad="7"/>
 <wire x1="-1.905" y1="-93.92" x2="-12.28" y2="-175.26" width="0" layer="19" extent="1-1"/>
-<wire x1="0.635" y1="-93.92" x2="-1.905" y2="-93.92" width="0" layer="19" extent="1-1"/>
+<wire x1="-0.635" y1="-93.92" x2="-1.905" y2="-93.92" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AGND">
 <contactref element="OP2" pad="4"/>
