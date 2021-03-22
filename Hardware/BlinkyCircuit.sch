@@ -202,12 +202,6 @@
 <pin name="V_BATT" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
-<symbol name="AGND">
-<description>&lt;h3&gt;Analog Ground Supply&lt;/h3&gt;</description>
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
-<pin name="AGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -229,20 +223,6 @@
 &lt;p&gt;Generic symbol for the battery input to a system.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="VBATT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="AGND" prefix="AGND">
-<description>&lt;b&gt;Analog Ground Symbol&lt;/b&gt;
-&lt;p&gt;Generic symbol for a analog ground supply.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="AGND" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -1617,7 +1597,6 @@ Allows current flow when high potential at base.</description>
 <part name="SUPPLY2" library="LinnesLab-Symbols" deviceset="VBATT" device=""/>
 <part name="OP2" library="LinnesLab-AnalogIC" deviceset="OP-DUAL" device="R" package3d_urn="urn:adsk.eagle:package:15818288/2"/>
 <part name="SUPPLY3" library="LinnesLab-Symbols" deviceset="VBATT" device=""/>
-<part name="AGND1" library="LinnesLab-Symbols" deviceset="AGND" device=""/>
 <part name="SUPPLY5" library="LinnesLab-Symbols" deviceset="VBATT" device=""/>
 <part name="Q1" library="LinnesLab-DiscreteSemi" deviceset="NPN" device="-GENERIC" package3d_urn="urn:adsk.eagle:package:15662047/2"/>
 <part name="R7" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2"/>
@@ -1672,9 +1651,6 @@ Allows current flow when high potential at base.</description>
 </instance>
 <instance part="SUPPLY3" gate="G$1" x="109.22" y="53.34" smashed="yes">
 <attribute name="VALUE" x="109.22" y="56.134" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="AGND1" gate="G$1" x="109.22" y="25.4" smashed="yes">
-<attribute name="VALUE" x="109.22" y="22.606" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="OP2" gate="P" x="109.22" y="40.64" smashed="yes">
 <attribute name="NAME" x="110.49" y="44.45" size="1.778" layer="95"/>
@@ -1796,7 +1772,16 @@ Allows current flow when high potential at base.</description>
 <junction x="66.04" y="12.7"/>
 <pinref part="Q1" gate="G$1" pin="E"/>
 <wire x1="149.86" y1="73.66" x2="149.86" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="12.7" x2="66.04" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="12.7" x2="109.22" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="OP2" gate="P" pin="V-"/>
+<wire x1="109.22" y1="12.7" x2="66.04" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="33.02" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="27.94" x2="101.6" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="27.94" x2="101.6" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="109.22" y1="27.94" x2="109.22" y2="12.7" width="0.1524" layer="91"/>
+<junction x="109.22" y="27.94"/>
+<junction x="109.22" y="12.7"/>
 </segment>
 </net>
 <net name="V_BATT" class="0">
@@ -1931,17 +1916,6 @@ Allows current flow when high potential at base.</description>
 <pinref part="OP2" gate="B" pin="OUT"/>
 <wire x1="116.84" y1="78.74" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
 <junction x="124.46" y="78.74"/>
-</segment>
-</net>
-<net name="AGND" class="0">
-<segment>
-<pinref part="OP2" gate="P" pin="V-"/>
-<pinref part="AGND1" gate="G$1" pin="AGND"/>
-<wire x1="109.22" y1="33.02" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="27.94" x2="101.6" y2="27.94" width="0.1524" layer="91"/>
-<junction x="109.22" y="27.94"/>
-<wire x1="101.6" y1="27.94" x2="101.6" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$7" class="0">
