@@ -1801,10 +1801,6 @@ Allows current flow when high potential at base.</description>
 </net>
 <net name="V_BATT" class="0">
 <segment>
-<pinref part="SUPPLY2" gate="G$1" pin="V_BATT"/>
-<wire x1="2.54" y1="60.96" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="SUPPLY1" gate="G$1" pin="V_BATT"/>
 <pinref part="OP1" gate="P" pin="V+"/>
 <wire x1="17.78" y1="53.34" x2="17.78" y2="50.8" width="0.1524" layer="91"/>
@@ -1853,6 +1849,11 @@ Allows current flow when high potential at base.</description>
 <pinref part="LED9" gate="G$1" pin="A"/>
 <wire x1="180.34" y1="93.98" x2="185.42" y2="93.98" width="0.1524" layer="91"/>
 <junction x="180.34" y="93.98"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="SUPPLY2" gate="G$1" pin="V_BATT"/>
+<wire x1="2.54" y1="55.88" x2="2.54" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1948,12 +1949,6 @@ Allows current flow when high potential at base.</description>
 <pinref part="Q1" gate="G$1" pin="B"/>
 <wire x1="139.7" y1="78.74" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<junction x="2.54" y="55.88"/>
 </segment>
 </net>
 <net name="N$11" class="0">
